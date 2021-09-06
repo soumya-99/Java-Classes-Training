@@ -6,8 +6,11 @@ public class Main {
 
         var employee = new Employee();
 
-        employee.baseSalary = 50_000;
-        employee.hourlyRate = 50;
+        employee.setBaseSalary(50_000);
+        int baseSalary = employee.getBaseSalary();
+
+        employee.setHourlyRate(50);
+        int hourlyRate = employee.getHourlyRate();
 
         System.out.println(employee.calculateWage(10));
     }
