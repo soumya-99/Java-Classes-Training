@@ -8,7 +8,7 @@ public class Employee {
         return baseSalary + (extraHours * getHourlyRate());
     }
 
-    public int getBaseSalary() { // Getters
+    private int getBaseSalary() { // Getters
         return baseSalary;
     }
 
@@ -18,7 +18,7 @@ public class Employee {
         this.baseSalary = baseSalary;
     }
 
-    public int getHourlyRate() { // Getter
+    private int getHourlyRate() { // Getter
         return hourlyRate;
     }
 
