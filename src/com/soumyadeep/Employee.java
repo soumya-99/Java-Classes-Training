@@ -4,6 +4,11 @@ public class Employee {
     private int baseSalary;
     private int hourlyRate;
 
+    public Employee(int baseSalary, int hourlyRate) {
+        setBaseSalary(baseSalary);
+        setHourlyRate(hourlyRate);
+    }
+
     public int calculateWage(int extraHours) {
         return baseSalary + (extraHours * getHourlyRate());
     }
@@ -12,7 +17,7 @@ public class Employee {
         return baseSalary;
     }
 
-    public void setBaseSalary(int baseSalary) { // Setters
+    private void setBaseSalary(int baseSalary) { // Setters
         if (baseSalary <= 0)
             throw new IllegalArgumentException("Salary can't be 0 or less.");
         this.baseSalary = baseSalary;
@@ -22,7 +27,7 @@ public class Employee {
         return hourlyRate;
     }
 
-    public void setHourlyRate(int hourlyRate) { // Setter
+    private void setHourlyRate(int hourlyRate) { // Setter
         if (hourlyRate <= 0)
             throw new IllegalArgumentException("Hourly Rate can't be 0 or less.");
         this.hourlyRate = hourlyRate;
